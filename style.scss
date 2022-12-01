@@ -160,12 +160,10 @@ main form .formControl:nth-child(2) {
 
 .logwithfb {
     text-align: center;
-
     a {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        gap: 2px;
         font-size: 12px;
         font-weight: bolder;
         color: #385185;
@@ -177,7 +175,7 @@ main form .formControl:nth-child(2) {
         background-position: 82% 83.4%;
         height: 40px;
         width: 40px;
-        transform: scale(.4) translate(20px, 30px);
+        transform: scale(.4) translate(22px, 32px);
     }
 
     span::first-letter {
