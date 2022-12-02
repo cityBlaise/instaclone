@@ -445,31 +445,6 @@ footer {
             }
         }
 
-        @keyframes fadeIn {
-            from{
-                z-index: 2;
-                opacity: 0;
-                visibility: hidden;
-            }to{
-                
-                z-index: 10;
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-
-        @keyframes fadeout {
-            from{
-                
-                z-index: 10;
-                opacity: 1;
-                visibility: visible;
-            }to{
-                z-index: 3;
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
     }
 
     footer {

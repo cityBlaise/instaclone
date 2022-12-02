@@ -377,54 +377,6 @@ footer select {
     transition: linear 5s;
     opacity: 1;
   }
-  @-webkit-keyframes fadeIn {
-    from {
-      z-index: 2;
-      opacity: 0;
-      visibility: hidden;
-    }
-    to {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  @keyframes fadeIn {
-    from {
-      z-index: 2;
-      opacity: 0;
-      visibility: hidden;
-    }
-    to {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  @-webkit-keyframes fadeout {
-    from {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-    }
-    to {
-      z-index: 3;
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-    }
-    to {
-      z-index: 3;
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
   footer ul {
     -moz-column-gap: 0px;
          column-gap: 0px;
