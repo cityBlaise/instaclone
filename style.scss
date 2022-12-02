@@ -23,28 +23,21 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-main {}
 
 main .logo {
     padding-inline: 2.3rem;
     margin-block: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+
+    img{
+        object-fit: contain;
+        max-width: 200px;
+    }
 }
 
-main .logo::after {
-    padding-block: .5rem;
-    content: '';
-    width: 175px;
-    display: block;
-    height: 43px;
-    background-image: url("./assets/background.png");
-    background-position: 0px 90.4%;
-    background-repeat: no-repeat;
-    background-size: 200%;
-    display: inline-block;
-}
+
 
 main form {
     padding-inline: 2.5rem;
@@ -61,9 +54,9 @@ main form .formControl {
 
     input {
         outline: none;
-        font-size: 12px;
-        padding-top: 17px;
-        padding-bottom: 2px;
+        font-size: 13px;
+        padding-top: 19px;
+        padding-bottom: 4px;
         padding-inline: 10px;
         border: none;
         border-radius: 3px;
@@ -75,16 +68,22 @@ main form .formControl {
     span.placeholder {
         position: absolute;
         left: 9px;
-        top: 2px;
-        font-size: 10px;
+        top: 0px;
+        transform: translateY(100%);
+        font-size: 12px;
         color: #7b7878;
         white-space: nowrap;
         max-width: 78%;
         overflow: hidden;
         text-overflow: ellipsis;
-
+        transition: .2s ease;
         &::first-letter {
             text-transform: uppercase;
+        }
+
+        &.active{
+            top: 2px;
+            transform: translateY(0%);
         }
     }
 
@@ -119,9 +118,12 @@ main form .formControl:nth-child(2) {
         cursor: pointer;
         color: #262626;
         position: absolute;
-        transform: translateY(30%);
-        right: 10px;
-        padding-block: 4px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 4px;
+        display: flex;
+        align-items: center;
         text-transform: capitalize;
         font-weight: bolder;
         font-size: 13px;
@@ -225,14 +227,15 @@ main form .formControl:nth-child(2) {
         justify-content: center;
         gap: 10px;
 
+        height: 35px;
         a {
-            height: 50px;
             overflow: hidden;
         }
 
         img {
             max-width: 100%;
-            height: 35px;
+            max-height: 100%;
+            object-fit: contain;
         }
     }
 }
@@ -431,17 +434,14 @@ footer {
                 top: 0;
                 left: 0;
                 z-index: 2;
-                opacity: 0;
-                visibility: hidden;
-                transition: all ease 3s;
+                opacity: 0; 
+                transition: linear 5s;
                 &.active{
-                    animation: fadeIn 3s ease-in forwards;
+                    transition: linear 5s; 
+                    opacity: 1;
                 }
 
-                &.remove{
-                    animation: fadeout 3s ease-in forwards;
-
-                }
+                
             }
         }
 
