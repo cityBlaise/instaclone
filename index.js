@@ -157,9 +157,9 @@ var checkImagesLoaded = setInterval(() => {
   if (imagesLoaded == imagesElements.length) {
     console.log("all images loaded");
     clearInterval(checkImagesLoaded);
-    imagesWrapper = document.querySelector(".img-items");
-    init();
+    imagesWrapper = document.querySelector(".img-items"); 
     imagesWrapper.classList.remove("loading");
+    imageGalleryAnimationHandler()
   } else {
     console.log(imagesLoaded);
   }
