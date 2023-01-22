@@ -22,24 +22,36 @@
         content="https://city-insta-clone.netlify.app/assets/favicon_package_v0.16_2/android-chrome-192x192.png">
 
     <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener('load',()=>{
+             document.body.classList.remove('hidden')
+             console.log('content loaded!')
+             setTimeout(() => {
+                document.querySelector('.phone-container .wrapper').classList.add('animate')
+                const Jscript = document.createElement('script')
+                document.body.appendChild(Jscript);
+                Jscript.src ="./index.js";
+             }, 1000);
+        },false);
+    </script>
 </head>
 
-<body>
+<body class="hidden">
     <div class="supcontainer">
 
         <div class="container">
             <section class="phone-container">
                 <div class="wrapper">
                     <img src="./assets/phoneMockup.png" class="mockup" alt="">
-                    <div class="img-items">
-                        <img src="./assets/phoneImage1.png" alt="" id="firstImg" class="active">
-                        <img src="./assets/phoneImage2.png" alt="">
-                        <img src="./assets/phoneImage3.png" alt="">
-                        <img src="./assets/phoneImage4.png" alt="">
+                    <div class="img-items loading">
+                        <img id="firstImg" class="active"/>
+                        <img/>
+                        <img/>
+                        <img/>
                     </div>
                 </div>
             </section>
-            <section>
+            <section clss="mainSection">
                 <main>
                     <div class="border">
                         <div class="logo">
@@ -48,7 +60,7 @@
                         <form action="">
                             <div class="formControl">
                                 <span class="placeholder">num. téléphone, nom d'utilisateur ou email</span>
-                                <input type="text" name="" id="">
+                                <input type="text" name="">
                             </div>
                             <form action="">
                                 <div class="formControl">
@@ -161,7 +173,6 @@
             </ul>
         </footer>
     </div>
-</body>
-<script defer src="./index.js"></script>
+</body> 
 
 </html>
